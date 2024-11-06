@@ -1,17 +1,25 @@
 async function main() {
 	const Proposal = await ethers.getContractFactory('Proposal')
-	let contractAddress
+	const User = await ethers.getContractFactory('UserRegistry')
+	let proposalContractAddress, userContractAddress
 
 	try {
+		const user = await User.deploy()
+		await user.waitForDeployment()
+		userContractAddress = await user.getAddress()
+
+		// Proposal deployment
 		const proposal = await Proposal.deploy()
 		await proposal.waitForDeployment()
-		contractAddress = await proposal.getAddress()
+		proposalContractAddress = await proposal.getAddress()
 	} catch (error) {
 		console.error('Deployment error:', error)
 		return
 	}
 
-	console.log('Proposal contract deployed to:', contractAddress)
+	console.log('User contract deployed to:', userContractAddress)
+
+	console.log('Proposal contract deployed to:', proposalContractAddress)
 }
 
 main()
