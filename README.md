@@ -5,6 +5,7 @@
 This project aims to create a virtual community that operates on blockchain technology, allowing members to vote and collaborate on business proposals and community services. The application consists of a backend server, a frontend user interface, and smart contracts that handle the blockchain interactions.
 
 ## Project Structure
+```plaintext
 /virtual-community
 │
 ├── /backend
@@ -44,6 +45,7 @@ This project aims to create a virtual community that operates on blockchain tech
 ├── .env # Environment variables
 ├── .gitignore # Files to ignore in Git
 └── README.md # Project overview and setup instructions
+```
 
 ## Getting Started
 
