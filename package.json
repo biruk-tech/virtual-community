@@ -1,0 +1,23 @@
+{
+	"name": "virtual-community",
+	"version": "1.0.0",
+	"description": "This project aims to create a virtual community that operates on blockchain technology, allowing members to vote and collaborate on business proposals and community services. The application consists of a backend server, a frontend user interface, and smart contracts that handle the blockchain interactions.",
+	"main": "index.js",
+	"directories": {
+		"frontend": "frontend",
+		"backend": "backend",
+		"blockchain": "blockchain",
+		"doc": "docs",
+		"scripts": "scripts"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"frontend": "cd frontend && npm run dev",
+		"frontend:build": "cd frontend && npm run build",
+		"blockchain:node": "cd blockchain && npx hardhat node",
+		"blockchain:deploy": "cd blockchain && npx hardhat run scripts/deploy.js --network localhost",
+		"blockchain:test": "cd blockchain && npx hardhat test"
+	},
+	"author": "",
+	"license": "ISC"
+}
